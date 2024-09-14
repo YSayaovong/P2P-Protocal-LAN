@@ -14,14 +14,15 @@
             // Show the selected section
             document.getElementById(sectionId).style.display = 'block';
         }
-
-        // Show the Abstract section by default on page load
-        window.onload = function() {
-            showSection('abstract');
-        }
     </script>
 </head>
 <body>
+
+<div class="header">
+    <h1>Peer-to-Peer Protocols and Local Area Networks</h1>
+    <p>Yengkong Sayaovong<br>
+    9/6/2024</p>
+</div>
 
 <div class="sidebar">
     <h2>Table of Contents</h2>
@@ -37,11 +38,7 @@
 </div>
 
 <div class="content">
-    <h1>Peer-to-Peer Protocols and Local Area Networks</h1>
-    <p>Yengkong Sayaovong<br>
-    9/6/2024</p>
-
-    <div id="abstract" class="section">
+    <div id="abstract" class="section" style="display:none;">
         <h2>Abstract</h2>
         <p>This project paper explores key aspects of communication protocols used in peer-to-peer networks and Local Area Networks (LANs). It examines a series of protocol-related topics, including message fragmentation in peer-to-peer processes, Stop-and-Wait Automatic Repeat reQuest (ARQ) systems, delay-bandwidth product calculation, sequence number wrap-around times, and efficiency comparisons between ALOHA and CSMA-CD protocols. Additionally, the paper presents solutions to challenges arising from the design of peer-to-peer networks, especially regarding transmission errors and control information. The final section discusses the higher efficiency of CSMA-CD compared to ALOHA in typical LAN environments.</p>
     </div>
