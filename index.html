@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Peer-to-Peer Protocols and Local Area Networks</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<h1>Peer-to-Peer Protocols and Local Area Networks</h1>
+<p>Yengkong Sayaovong<br>
+9/6/2024</p>
+
+<h2>Table of Contents</h2>
+<ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#message-fragmentation">1. Message Fragmentation in Peer-to-Peer Protocols</a></li>
+    <li><a href="#stop-and-wait-arq">2. Stop-and-Wait ARQ Protocol</a></li>
+    <li><a href="#delay-bandwidth-product">3. Delay-Bandwidth Product</a></li>
+    <li><a href="#sequence-number-wrap-around">4. Sequence Number Wrap-Around Times</a></li>
+    <li><a href="#efficiency-comparison">5. Efficiency Comparison of MAC Protocols in LANs</a></li>
+    <li><a href="#references">References</a></li>
+</ul>
+
+<div id="abstract" class="section">
+    <h2>Abstract</h2>
+    <p>This project paper explores key aspects of communication protocols used in peer-to-peer networks and Local Area Networks (LANs). It examines a series of protocol-related topics, including message fragmentation in peer-to-peer processes, Stop-and-Wait Automatic Repeat reQuest (ARQ) systems, delay-bandwidth product calculation, sequence number wrap-around times, and efficiency comparisons between ALOHA and CSMA-CD protocols. Additionally, the paper presents solutions to challenges arising from the design of peer-to-peer networks, especially regarding transmission errors and control information. The final section discusses the higher efficiency of CSMA-CD compared to ALOHA in typical LAN environments.</p>
+</div>
+
+<div id="message-fragmentation" class="section">
+    <h2>1. Message Fragmentation in Peer-to-Peer Protocols</h2>
+    <p>In peer-to-peer communication protocols, the need to handle messages of arbitrary size is addressed by fragmenting messages into smaller pieces. A system that transfers messages using protocol data units (PDUs) can only handle a maximum size of M bytes, including H bytes for the header. To handle larger messages, a fragmentation mechanism must be implemented, which ensures that each message is divided into segments that fit into the available PDU size.</p>
+</div>
+
+<div id="stop-and-wait-arq" class="section">
+    <h2>2. Stop-and-Wait ARQ Protocol</h2>
+    <p>The Stop-and-Wait ARQ (Automatic Repeat reQuest) protocol is designed to ensure reliable data transmission between stations by requiring acknowledgments for each frame. If the acknowledgment is not received within a specific timeout period, the frame is retransmitted. In scenarios where the timeout value is less than the acknowledgment time, unnecessary retransmissions occur. For example, when station A sends five frames to station B in an error-free environment, the timeout results in repeated retransmissions despite the successful delivery of frames.</p>
+</div>
+
+<div id="delay-bandwidth-product" class="section">
+    <h2>3. Delay-Bandwidth Product</h2>
+    <p>In a communication channel running at 1 Gbps with a round-trip time of 10 milliseconds, the delay-bandwidth product is calculated to determine the amount of data that can be in transit in the network at any given time. The formula Delay-Bandwidth Product = Bandwidth × Round-Trip Time gives a result of 10 million bits, equivalent to 1.25 MB.</p>
+</div>
+
+<div id="sequence-number-wrap-around" class="section">
+    <h2>4. Sequence Number Wrap-Around Times</h2>
+    <p>When using 32-bit sequence numbers to transmit blocks of 1000 bytes, the sequence numbers wrap around after approximately 9.54 hours due to the high transmission rate. If 32-bit sequence numbers are instead used to count individual bytes, the wrap-around time is significantly reduced to approximately 34.36 seconds.</p>
+</div>
+
+<div id="efficiency-comparison" class="section">
+    <h2>5. Efficiency Comparison of MAC Protocols in LANs</h2>
+    <p>The Carrier Sense Multiple Access with Collision Detection (CSMA-CD) protocol offers higher efficiency compared to ALOHA in Local Area Networks (LANs). ALOHA suffers from frequent collisions and inefficiency due to its lack of carrier sensing and collision detection mechanisms. In contrast, CSMA-CD can achieve efficiency levels as high as 90% in high-speed LAN environments with low propagation delays, making it the more effective MAC protocol for LANs.</p>
+</div>
+
+<div id="references" class="section">
+    <h2>References</h2>
+    <p>Forouzan, B. A., & Fegan, S. (2013). <em>Data Communications and Networking</em> (5th ed.). McGraw-Hill Education.<br>
+    Stallings, W. (2021). <em>Data and Computer Communications</em> (11th ed.). Pearson.</p>
+</div>
+
+</body>
+</html>
